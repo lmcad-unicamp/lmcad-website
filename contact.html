@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LMCAD - Multidisciplinary High Performance Computing Lab </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LOGO + Carousel -----------------------------------------------  -->
+    <div class="row" >
+
+      <div class="col-md-4" style="height=92px" >
+	<img src="./img/LMCAD-logo.png"/ height="92">
+      </div>
+
+      <div class="col-xs-8" style="height:92px;display:flex;align-items: center">
+	<div id = "myCarousel" class = "carousel slide" style="width=100%"  >
+	  <style>
+	    it1 {
+	    font-size:3.5vw;
+	    color:rgb(190,80,80);
+	    }
+	  </style>
+	  <!-- Add new carousel items here! -->
+	  <div class = "carousel-inner" >
+	    <div class = "item active"> <it1>High Performance Computing</it1></div>
+	    <div class = "item"> <it1>Efficient Cryptography</it1></div>
+	    <div class = "item"> <it1>Internet of Things</it1></div>
+	    <div class = "item"> <it1>Cloud Computing</it1></div>
+	    <div class = "item"> <it1>Energy Efficient Computing</it1></div>
+	    <div class = "item"> <it1>Computational Thinking</it1></div>
+	  </div>
+	</div> <!-- myCarousel-->
+      </div> <!-- col -->
+
+    </div>
+    <!-- ---------------------------------------------------------------  -->
+
+    <!-- LOGO + Navigation Bar -----------------------------------------  -->
+    <div class="row">
+
+      <nav class="navbar navbar-inverse " role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">Home</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="./people.html">People</a>
+              </li>
+              <!-- TODO: Fill the projects page
+	      <li>
+                <a href="./projects.html">Projects</a>
+              </li>
+	      -->
+              <li>
+                <a href="./publications.html">Publications</a>
+              </li>
+              <!-- TODO: Fill the sponsors and partners page
+              <li>
+                <a href="./sponsors_and_partners.html">Sponsors and Partners</a>
+              </li>
+	      -->
+              <li>
+                <a href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+      </nav>
+      
+    </div> <!-- row -->
+    <!-- ---------------------------------------------------------------  -->
+
+ 
+<!-- Page contents  ------------------------------------------------  -->
+<div class="row">
+  
+  <div class="col-sm-6">
+    <h3 class="page-header">Address</h3>
+    <p>
+      Instituto de Computação - Sala 318 - IC 3
+      </br>
+      Universidade Estadual de Campinas
+      </br>
+      Av. Albert Einstein, 1251
+      </br>
+      Cidade Universitária, Campinas/SP - Brasil
+      </br>
+      CEP 13083-852
+      </br>
+      Phone: +55 (19) 3521-0346
+    </p>
+  </div>
+
+  <div class="col-sm-6">
+    <h3 class="page-header">Map</h3>
+    <a href="https://www.google.com/maps/place/Instituto+de+Computa%C3%A7%C3%A3o/@-22.8137059,-47.0639556,20z/data=!4m2!3m1!1s0x0:0xd2718275096f3d70" target="blank">
+      <img src="./img/map.png"/ class="img-responsive img-rounded">
+    </a>
+  </div>
+
+  <div class="col-sm-6">
+    <h3 class="page-header">Technical Support</h3>
+    <p>
+      suporte@lmcad.ic.unicamp.br
+    </p>
+  </div>
+  
+  <!-- 
+  <div class="col-xs-4">
+    col 1
+  </div>
+  <div class="col-xs-4">
+    col 2
+  </div>
+  <div class="col-xs-4">
+    col 3
+  </div>
+
+  -->
+
+</div>  <!-- /.row -->
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12" style="text-align:center">
+                    <p>Copyright &copy; LMCAD 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Make the carousel cycle from start -->
+    <script type="text/javascript">
+      var $ = jQuery.noConflict();
+      $(document).ready(function() { 
+      $('#myCarousel').carousel({ interval: 2000, cycle: true });
+      }); 
+    </script>
+
+</body>
+
+</html>
