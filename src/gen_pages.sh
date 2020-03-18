@@ -14,6 +14,10 @@ function fail
 ./gen_people_page.sh > pages/people.html || \
     fail "Could not generate the people pages - see pages/people.html for errors"
 
+# Gen people pages
+./gen_index_page.sh > pages/index.html || \
+    fail "Could not generate the indexs - see pages/index.html for errors"
+
 # Gen alumni page
 ./gen_alumni_page.sh > pages/alumni.html || \
     fail "Could not generate the alumni page - see pages/alumni.html for errors"
