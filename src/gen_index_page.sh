@@ -11,7 +11,7 @@ function fail
 
 function gen_index_about {
    cat <<EOF
-      <div class="col-sm-8">
+      <div class="col-sm-12">
 
 	<h3 class="page-header">About</h3>
 	
@@ -43,11 +43,9 @@ EOF
 function gen_index_news {
 
     cat <<DELIM
-      <div class="col-sm-4">
-
+      <div class="col-sm-12">
 	<h3 class="page-header">News</h3>
-
-	<ul id="newsbox" style="overflow-y: hidden; ">
+      </div> 
 
 DELIM
 
@@ -55,13 +53,15 @@ DELIM
     for i in `ls -w ./news/*.html | sort -r `; do
 	if [ $I = "${MAX_NEWS_ITEMS}" ]; then break; fi # Stop at MAX_NEWS_ITEMS
 	I=$((I+1));
-	cat $i;
+    cat <<DELIM
+      <div class="col-sm-4" style="margin-bottom: 20px" >
+DELIM
+    cat $i | sed "s~<li class=\"news-item\">~~g" | sed "s~</li>~~g"
+    cat <<DELIM
+      </div>
+DELIM
     done
 
-    cat <<DELIM
-          </ul>
-        </div>
-DELIM
 }
 
 
