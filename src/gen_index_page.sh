@@ -56,7 +56,7 @@ DELIM
     cat <<DELIM
       <div class="col-sm-4" style="margin-bottom: 20px" >
 DELIM
-    cat $i | sed "s~<li class=\"news-item\">~~g" | sed "s~</li>~~g"
+    cat $i
     cat <<DELIM
       </div>
 DELIM
