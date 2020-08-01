@@ -44,7 +44,7 @@ function gen_index_news {
 
     cat <<DELIM
       <div class="col-sm-12">
-	<h3 class="page-header">News</h3>
+	<h3 class="page-header"><a href="./news.html">News</a></h3>
       </div> 
 
 DELIM
