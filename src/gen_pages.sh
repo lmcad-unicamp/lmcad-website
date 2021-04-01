@@ -32,9 +32,15 @@ function fail
 for i in pages/*.html; do
     B=`basename $i`
     [ -f ${i} ] || fail "$i is not a file"
-    echo "Generating page: $i"
+
+    # Check for page title
+    BB=`basename $i .html`
+    TITLE="LMCAD: $BB"
+    [ ! -f "pages/$BB.title" ] || TITLE=`cat pages/$BB.title`
+
     # Generate page
-    cp ${HEADER} ./tmp || fail "could not copy ${HEADER} to ./tmp"
+    echo "Generating page: $i -- TITLE: $TITLE"
+    sed "s/PAGETITLE/${TITLE}/g" < ${HEADER} > ./tmp || fail "could not copy ${HEADER} to ./tmp"
     cat $i >> ./tmp || fail "could not append ${i} to ./tmp"
     cat ${FOOTER} >> ./tmp || fail "could not append ${i} to ./tmp"
     echo "Installing page: $i at ../$B"
